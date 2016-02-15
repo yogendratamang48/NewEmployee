@@ -70,6 +70,7 @@
     <Content Include="EmployeePages\EmployeeProfile.aspx" />
     <Content Include="EmployeePages\FamilyAdd.aspx" />
     <Content Include="EmployeePages\LeaveAdd.aspx" />
+    <Content Include="EmployeePages\TrainingAdd.aspx" />
     <Content Include="packages.config" />
     <Content Include="Master.Master" />
     <Content Include="EmployeePages\EmployeeView.Master" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="EmployeePages\LeaveAdd.aspx.designer.cs">
       <DependentUpon>LeaveAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePages\TrainingAdd.aspx.cs">
+      <DependentUpon>TrainingAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeePages\TrainingAdd.aspx.designer.cs">
+      <DependentUpon>TrainingAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
