@@ -17,53 +17,27 @@
                                         <tr>
                                             <td>
                                                 <div class="row">
-                                                    <div class="col-lg-2">
+                                                    <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <asp:Label ID="lblLevel" runat="server" Text="तह" CssClass="control-label text-center">
+                                                            <asp:Label ID="lblLeaveType" runat="server" Text="विदाको प्रकार" CssClass="control-label text-center">
 
                                                             </asp:Label>
-                                                            <asp:DropDownList ID="ddlLevel" runat="server" CssClass="form-control">
-                                                                <asp:ListItem Text="Under SLC" Value="Under SLC"></asp:ListItem>
-                                                                <asp:ListItem Text="SLC" Value="Under SLC"></asp:ListItem>
-                                                                <asp:ListItem Text="प्रमाणपत्र" Value="Certificate"></asp:ListItem>
-                                                                <asp:ListItem Text="स्नातकोत्तर" Value="Bachelors"></asp:ListItem>
-                                                                <asp:ListItem Text="स्नातह" Value="Masters"></asp:ListItem>
+                                                            <asp:DropDownList ID="ddlLeaveType" runat="server" CssClass="form-control">
+                                                                <asp:ListItem Text="भैपरी बिदा" Value="1"></asp:ListItem>
+                                                                <asp:ListItem Text="पर्व बिदा" Value="2"></asp:ListItem>
+                                                                <asp:ListItem Text="विरामी बिदा" Value="3"></asp:ListItem>
+                                                                <asp:ListItem Text="घर बिदा" Value="4"></asp:ListItem>
+                                                                
                                                             </asp:DropDownList>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <asp:Label ID="lblInstitutionName" runat="server" Text="शैक्षिक संस्थाको नाम र ठेगाना" CssClass="control-label">
+                                                            <asp:Label ID="lblDaysTaken" runat="server" Text="जम्मा लिएको बिदा" CssClass="control-label">
 
                                                             </asp:Label>
 
-                                                            <asp:TextBox ID="txtInstitutionName" runat="server" Text="शैक्षिक संस्थाको नाम र ठेगाना" CssClass="form-control">
-
-                                                            </asp:TextBox>
-
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="form-group">
-                                                            <asp:Label ID="lblPassedYear" runat="server" Text="उत्तीर्ण गरेको वर्ष" CssClass="control-label">
-
-                                                            </asp:Label>
-
-                                                            <asp:TextBox ID="txtPassedYear" runat="server" placeholder="YYYY" CssClass="form-control">
-
-                                                            </asp:TextBox>
-
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="form-group">
-                                                            <asp:Label ID="lblPassedGrade" runat="server" Text="प्रतिशत/ग्रेड" CssClass="control-label">
-
-                                                            </asp:Label>
-
-                                                            <asp:TextBox ID="txtPassedGrade" runat="server" placeholder="प्रतिशत/ग्रेड" CssClass="form-control">
+                                                            <asp:TextBox ID="txtDaysTaken" runat="server" CssClass="form-control">
 
                                                             </asp:TextBox>
 
@@ -72,11 +46,11 @@
                                                     </div>
                                                     <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <asp:Label ID="lblMajorSubjects" runat="server" Text="मुख्य विषयहरु" CssClass="control-label">
+                                                            <asp:Label ID="lblTakenDate" runat="server" Text="बिदा लिएको मिति" CssClass="control-label">
 
                                                             </asp:Label>
 
-                                                            <asp:TextBox ID="txtMajorSubjects" runat="server" placeholder="मुख्य विषयहरु" CssClass="form-control">
+                                                            <asp:TextBox ID="txtTakenDate" runat="server" placeholder="YYYY-MM-DD" CssClass="form-control">
 
                                                             </asp:TextBox>
 
@@ -85,22 +59,23 @@
                                                     </div>
                                                     <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <asp:Label ID="lblNotes" runat="server" Text="Notes" CssClass="control-label">
+                                                            <asp:Label ID="lblNote" runat="server" Text="नोट" CssClass="control-label">
 
                                                             </asp:Label>
 
-                                                            <asp:TextBox ID="txtNotes" runat="server" placeholder="Notes" CssClass="form-control">
+                                                            <asp:TextBox ID="txtNote" runat="server" placeholder="नोट" CssClass="form-control">
 
                                                             </asp:TextBox>
 
 
                                                         </div>
                                                     </div>
+                                                   
                                                 </div>
 
                                                 <div class="row">
                                                     <div class="col-lg-6">
-                                                        <asp:Button runat="server" ID="btnAddAnother" type="submit" CssClass="btn btn-primary" Text="ADD LEVEL" OnClick="btnAddAnother_Click"></asp:Button>
+                                                        <asp:Button runat="server" ID="btnAddAnother" type="submit" CssClass="btn btn-primary" Text="ADD LEAVE" OnClick="btnAddAnother_Click"></asp:Button>
                                                     </div>
 
                                                 </div>
@@ -120,40 +95,20 @@
                             <div class="col-lg-12">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        कर्मचारीहरुको विवरण
+                                        बिदा सम्बन्धी जानकारी
                                     </div>
                                     <!-- /.panel-heading -->
                                     <div class="panel-body">
-                                        <asp:GridView ID="dgEducation" runat="server" AutoGenerateColumns="False" UseAccessibleHeader="true"  CssClass="table table-hover table-striped table-bordered" OnPreRender="dgEducation_PreRender" OnRowCommand="dgEducation_RowCommand">
+                                        <asp:GridView ID="dgLeave" runat="server" AutoGenerateColumns="False" UseAccessibleHeader="true"  CssClass="table table-hover table-striped table-bordered" OnPreRender="dgLeave_PreRender" OnRowCommand="dgLeave_RowCommand">
                                             <Columns>
                                                 <asp:TemplateField HeaderText="Id">
                                                     <ItemTemplate>
-                                                        <%#Eval("fldEducationInfoID") %>
+                                                        <%#Eval("fldLeaveDetailsID") %>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="LEVEL">
+                                                <asp:TemplateField HeaderText="fldLeaveID">
                                                     <ItemTemplate>
-                                                        <%#Eval("fldLevel") %>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Board or university">
-                                                   <ItemTemplate>
-                                                        <%#Eval("fldBoardorUniversity") %>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Passed year">
-                                                   <ItemTemplate>
-                                                        <%#Eval("fldPassedyear") %>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Grade">
-                                                   <ItemTemplate>
-                                                        <%#Eval("fldPassedGrade") %>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Major Subjects">
-                                                    <ItemTemplate>
-                                                        <%#Eval("fldMajorSubjects") %>
+                                                        <%#Eval("fldLeaveID") %>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                                  <asp:TemplateField HeaderText="Notes">
@@ -163,7 +118,7 @@
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Remove">
                                                     <ItemTemplate>
-                                                        <asp:LinkButton ID="lnkRemove" CssClass="btn btn-danger btn-sm" runat="server" CommandArgument='<%#Eval("fldEducationInfoID")%>'  
+                                                        <asp:LinkButton ID="lnkRemove" CssClass="btn btn-danger btn-sm" runat="server" CommandArgument='<%#Eval("fldLeaveDetailsID")%>'  
                                                             CommandName="Remove" OnClientClick="return confirm('Are you sure you want to delete this Education Level?');"><i class="glyphicon glyphicon-remove "></i>  Remove</asp:LinkButton>
                                                          </ItemTemplate>
                                                 </asp:TemplateField>

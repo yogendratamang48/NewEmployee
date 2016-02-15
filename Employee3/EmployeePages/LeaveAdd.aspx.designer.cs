@@ -13,112 +13,76 @@ namespace Employee3.EmployeePages {
     public partial class LeaveAdd {
         
         /// <summary>
-        /// lblLevel control.
+        /// lblLeaveType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLevel;
+        protected global::System.Web.UI.WebControls.Label lblLeaveType;
         
         /// <summary>
-        /// ddlLevel control.
+        /// ddlLeaveType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLevel;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLeaveType;
         
         /// <summary>
-        /// lblInstitutionName control.
+        /// lblDaysTaken control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInstitutionName;
+        protected global::System.Web.UI.WebControls.Label lblDaysTaken;
         
         /// <summary>
-        /// txtInstitutionName control.
+        /// txtDaysTaken control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInstitutionName;
+        protected global::System.Web.UI.WebControls.TextBox txtDaysTaken;
         
         /// <summary>
-        /// lblPassedYear control.
+        /// lblTakenDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassedYear;
+        protected global::System.Web.UI.WebControls.Label lblTakenDate;
         
         /// <summary>
-        /// txtPassedYear control.
+        /// txtTakenDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassedYear;
+        protected global::System.Web.UI.WebControls.TextBox txtTakenDate;
         
         /// <summary>
-        /// lblPassedGrade control.
+        /// lblNote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassedGrade;
+        protected global::System.Web.UI.WebControls.Label lblNote;
         
         /// <summary>
-        /// txtPassedGrade control.
+        /// txtNote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassedGrade;
-        
-        /// <summary>
-        /// lblMajorSubjects control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMajorSubjects;
-        
-        /// <summary>
-        /// txtMajorSubjects control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMajorSubjects;
-        
-        /// <summary>
-        /// lblNotes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNotes;
-        
-        /// <summary>
-        /// txtNotes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNotes;
+        protected global::System.Web.UI.WebControls.TextBox txtNote;
         
         /// <summary>
         /// btnAddAnother control.
@@ -130,12 +94,12 @@ namespace Employee3.EmployeePages {
         protected global::System.Web.UI.WebControls.Button btnAddAnother;
         
         /// <summary>
-        /// dgEducation control.
+        /// dgLeave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgEducation;
+        protected global::System.Web.UI.WebControls.GridView dgLeave;
     }
 }
