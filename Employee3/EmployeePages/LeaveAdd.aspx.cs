@@ -77,6 +77,17 @@ namespace Employee3.EmployeePages
             return result;
         }
 
-        
+        protected void dgLeave_PreRender(object sender, EventArgs e)
+        {
+            try
+            {
+                dgLeave.HeaderRow.TableSection = TableRowSection.TableHeader;
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+
     }
 }
